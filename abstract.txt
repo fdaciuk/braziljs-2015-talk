@@ -1,0 +1,3 @@
+A log is a very useful data structure that is easy to store securely and
+consistently. Using leveldb, I will show how to build DAGs and indexes that work
+with replication and offline use in node and the browser.
