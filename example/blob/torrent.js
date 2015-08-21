@@ -1,7 +1,6 @@
 var store = require('torrent-blob-store')
 var blob = store({
-  tracker: false,
-  trackers: [ 'udp://localhost:9000' ]
+  trackers: ['udp://localhost:9000']
 })
 
 if (process.argv[2] === 'put') {
