@@ -7,7 +7,7 @@ dht.listen(5001)
 
 console.log(kp.id)
 var prev = 'null'
-updateHash('...\n')
+updateHash(prev)
 
 var server = http.createServer(function (req, res) {
   if (req.url === '/post') {
@@ -23,7 +23,7 @@ server.listen(5000)
 
 function post (value, cb) {
   value = Buffer.concat([
-    Buffer('Prev: ' + prev.toString('hex') + '\n'),
+    Buffer(prev.toString('hex') + '\n'),
     value
   ])
   dht.put({ v: value }, function (errors, hash) {
