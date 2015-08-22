@@ -127,9 +127,19 @@ demo!
 demo!
 
 ---
+# hyperlog browser replication
+
+demo!
+
+---
 # content-addressable-blob-store
 
 and we'll need an immutable blob storage engine too
+
+demo!
+
+---
+# idb-content-addressable-blob-store
 
 demo!
 

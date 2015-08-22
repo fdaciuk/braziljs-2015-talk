@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "content-addressable-blob-store": "^4.2.1",
-    "forkdb": "^9.2.0",
     "hyperlog": "^4.6.0",
     "hyperlog-index": "^3.1.0",
     "level": "^1.3.0",
@@ -12,7 +11,6 @@
     "torrent-stream": "^0.21.3",
     "trust-log": "^1.0.0",
     "websocket-stream": "^2.0.0",
-    "webtorrent": "^0.57.0",
-    "wikidb": "^4.1.0"
+    "webtorrent": "^0.57.0"
   }
 }
