@@ -1,14 +1,13 @@
-var http = require('http')
-var concat = require('concat-stream')
 var kp = require('bittorrent-dht-store-keypair')()
-
+console.log(kp.id)
 var dht = new(require('bittorrent-dht'))({ bootstrap: false })
 dht.listen(5001)
 
-console.log(kp.id)
 var prev = 'null'
 updateHash(prev)
 
+var http = require('http')
+var concat = require('concat-stream')
 var server = http.createServer(function (req, res) {
   if (/^(POST|PUT)$/.test(req.method)) {
     req.pipe(concat(function (body) {
@@ -35,7 +34,6 @@ function post (value, cb) {
   })
 }
 
-var seq = 0
 function updateHash (hash) {
   var hex = hash.toString('hex')
   dht.put(kp.store(hex), function onput(errors, hash) {
